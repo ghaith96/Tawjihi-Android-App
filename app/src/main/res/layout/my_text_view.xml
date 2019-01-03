@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?><!-- player_row.xml -->
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/mainCard"
+    style="@style/Base.Widget.AppCompat.Button.Borderless"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="10dp"
+    android:clickable="true"
+    android:elevation="4dp"
+    android:layoutDirection="rtl"
+    android:transitionName="mainCard_t"
+    app:cardBackgroundColor="@android:color/transparent">
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="10dp">
+
+        <ImageView
+            android:id="@+id/branch_img"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:src="@drawable/my_clear"
+            android:transitionName="branch_ic"
+            android:translationZ="5dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/branch"
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:text="branch "
+            android:textSize="13dp"
+            android:transitionName="branch_name"
+            android:translationZ="5dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/branch_img" />
+
+        <TextView
+            android:id="@+id/name"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="my name"
+            android:textSize="17dp"
+            android:textStyle="bold"
+            android:transitionName="name"
+            android:translationZ="5dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/school"
+            android:layout_width="60dp"
+            android:layout_height="wrap_content"
+            android:text="school"
+            android:textSize="13dp"
+            android:transitionName="school"
+            app:layout_constraintStart_toStartOf="@id/name"
+            app:layout_constraintTop_toBottomOf="@id/name" />
+
+        <TextView
+            android:id="@+id/dash"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=" - "
+            android:textSize="10dp"
+            app:layout_constraintStart_toEndOf="@id/school"
+            app:layout_constraintTop_toBottomOf="@id/name" />
+
+        <TextView
+            android:id="@+id/region"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="region"
+            android:textSize="13dp"
+            android:transitionName="region"
+            app:layout_constraintStart_toEndOf="@id/dash"
+            app:layout_constraintTop_toBottomOf="@id/name" />
+
+        <TextView
+            android:id="@+id/rating"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:text="90"
+            android:translationZ="5dp"
+            android:textSize="30dp"
+            android:textStyle="bold"
+            android:transitionName="score"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/year"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="year"
+            android:transitionName="year"
+            app:layout_constraintEnd_toEndOf="@id/rating"
+            app:layout_constraintStart_toStartOf="@id/rating"
+            app:layout_constraintTop_toBottomOf="@id/rating" />
+
+    </android.support.constraint.ConstraintLayout>
+</android.support.v7.widget.CardView>

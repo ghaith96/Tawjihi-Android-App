@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?><!-- player_row.xml -->
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/mainCard"
+    style="@style/Base.Widget.AppCompat.Button.Borderless"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="10dp"
+    android:clickable="true"
+    android:elevation="4dp"
+    android:layoutDirection="rtl"
+    android:transitionName="mainCard_t"
+    app:cardBackgroundColor="@android:color/transparent">
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="10dp">
+
+        <View
+            android:id="@+id/branch_img"
+            android:layout_width="30dp"
+            android:layout_height="40dp"
+            android:layout_margin="10dp"
+            android:background="@color/shimmer"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <View
+            android:id="@+id/branch"
+            android:layout_width="50dp"
+            android:layout_height="20dp"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="3dp"
+            android:background="@color/shimmer"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/branch_img" />
+
+        <View
+            android:id="@+id/name"
+            android:layout_width="150dp"
+            android:layout_height="25dp"
+            android:layout_marginTop="10dp"
+            android:background="@color/shimmer"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <View
+            android:id="@+id/school"
+            android:layout_width="50dp"
+            android:layout_height="20dp"
+            android:layout_marginTop="3dp"
+            android:background="@color/shimmer"
+            app:layout_constraintStart_toStartOf="@id/name"
+            app:layout_constraintTop_toBottomOf="@id/name" />
+
+        <View
+            android:id="@+id/dash"
+            android:layout_width="10dp"
+            android:layout_height="20dp"
+            android:layout_marginTop="3dp"
+
+            android:background="@color/shimmer"
+            app:layout_constraintStart_toEndOf="@id/school"
+            app:layout_constraintTop_toBottomOf="@id/name" />
+
+        <View
+            android:id="@+id/region"
+            android:layout_width="45dp"
+            android:layout_height="20dp"
+            android:layout_marginTop="3dp"
+
+            android:background="@color/shimmer"
+            app:layout_constraintStart_toEndOf="@id/dash"
+            app:layout_constraintTop_toBottomOf="@id/name" />
+
+        <View
+            android:id="@+id/rating"
+            android:layout_width="35dp"
+            android:layout_height="45dp"
+            android:layout_margin="5dp"
+            android:background="@color/shimmer"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <View
+            android:id="@+id/year"
+            android:layout_width="35dp"
+            android:layout_height="25dp"
+            android:layout_marginTop="3dp"
+            android:background="@color/shimmer"
+            app:layout_constraintEnd_toEndOf="@id/rating"
+            app:layout_constraintStart_toStartOf="@id/rating"
+            app:layout_constraintTop_toBottomOf="@id/rating" />
+
+    </android.support.constraint.ConstraintLayout>
+</android.support.v7.widget.CardView>

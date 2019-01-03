@@ -1,0 +1,243 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tool="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:animateLayoutChanges="true"
+    android:layoutDirection="rtl"
+    android:textDirection="rtl">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/frg_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimary" />
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/frg_toolbar">
+
+        <TextView
+            android:id="@+id/frg_name"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="50dp"
+            android:textSize="30dp"
+            android:transitionName="name"
+            android:translationZ="5dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tool:text="يوسف جمال مصطفى بلوط" />
+
+        <TextView
+            android:id="@+id/frg_school"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="50dp"
+            android:textSize="15dp"
+            android:transitionName="school"
+            app:layout_constraintStart_toStartOf="@id/frg_name"
+            app:layout_constraintTop_toBottomOf="@id/frg_name"
+            tool:text="اكادمية القران الكريم" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=" - "
+            android:textSize="15dp"
+            app:layout_constraintStart_toEndOf="@id/frg_school"
+            app:layout_constraintTop_toBottomOf="@id/frg_name" />
+
+        <TextView
+            android:id="@+id/frg_region"
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="13dp"
+            android:textSize="15dp"
+            android:transitionName="region"
+            app:layout_constraintStart_toEndOf="@id/frg_school"
+            app:layout_constraintTop_toBottomOf="@id/frg_name"
+            tool:text="نابلس" />
+
+        <TextView
+            android:id="@+id/frg_score"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="50dp"
+            android:textStyle="bold"
+            android:transitionName="score"
+            android:translationZ="5dp"
+            app:layout_constraintEnd_toEndOf="@id/frg_region"
+            app:layout_constraintTop_toBottomOf="@id/frg_school"
+            tool:text="92.2"
+            tool:textColor="#4CAF50" />
+
+        <ImageView
+            android:id="@+id/frg_branch_img"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginEnd="10dp"
+            android:src="@drawable/my_clear"
+            android:transitionName="branch_ic"
+            android:translationZ="5dp"
+
+            app:layout_constraintLeft_toRightOf="@id/frg_score"
+            app:layout_constraintTop_toBottomOf="@id/frg_school" />
+
+        <TextView
+            android:id="@+id/frg_branch"
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"
+            android:transitionName="branch_name"
+            android:translationZ="5dp"
+            app:layout_constraintStart_toStartOf="@id/frg_branch_img"
+            app:layout_constraintTop_toBottomOf="@id/frg_branch_img"
+            tool:text="العلمي" />
+
+        <View
+            android:id="@+id/frg_breaker"
+            android:layout_width="350dp"
+            android:layout_height="1dp"
+            android:background="@android:color/darker_gray"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/frg_score" />
+
+        <android.support.constraint.ConstraintLayout
+            android:id="@+id/frg_school_rank_box"
+            android:layout_width="150dp"
+            android:layout_height="130dp"
+            android:layout_margin="20dp"
+            android:background="#5BAABB"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/frg_breaker">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:text="الترتيب على المدرسة"
+                android:textColor="@android:color/white"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/frg_school_rank"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:textColor="@android:color/white"
+                android:textSize="50dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tool:text="6" />
+
+        </android.support.constraint.ConstraintLayout>
+
+        <android.support.constraint.ConstraintLayout
+            android:id="@+id/frg_region_rank_box"
+            android:layout_width="150dp"
+            android:layout_height="130dp"
+            android:layout_margin="20dp"
+            android:layout_marginEnd="10dp"
+            android:background="#517BC5"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/frg_breaker">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:text="الترتيب على المحافظة"
+                android:textColor="@android:color/white"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/frg_region_rank"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:textColor="@android:color/white"
+                android:textSize="50dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tool:text="1874" />
+
+        </android.support.constraint.ConstraintLayout>
+
+        <android.support.constraint.ConstraintLayout
+            android:id="@+id/frg_overAll_rank_box"
+            android:layout_width="150dp"
+            android:layout_height="130dp"
+            android:layout_margin="20dp"
+            android:background="#4CB050"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/frg_school_rank_box">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:text="الترتيب الكلي"
+                android:textColor="@android:color/white"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/frg_overAll_rank"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:textColor="@android:color/white"
+                android:textSize="50dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tool:text="3994" />
+
+        </android.support.constraint.ConstraintLayout>
+
+        <android.support.constraint.ConstraintLayout
+            android:id="@+id/frg_branch_rank_box"
+            android:layout_width="150dp"
+            android:layout_height="130dp"
+            android:layout_margin="20dp"
+            android:background="#873DAC"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/frg_school_rank_box">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:text="الترتيب على الفرع"
+                android:textColor="@android:color/white"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/frg_branch_rank"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:textColor="@android:color/white"
+                android:textSize="50dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tool:text="2411" />
+
+        </android.support.constraint.ConstraintLayout>
+    </android.support.constraint.ConstraintLayout>
+
+</android.support.constraint.ConstraintLayout>
