@@ -3,17 +3,18 @@ package com.android.tawjihi_api;
 import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
-import android.support.annotation.NonNull;
-import android.support.v4.app.ActivityOptionsCompat;
-import android.support.v4.content.ContextCompat;
-import android.support.v4.util.Pair;
-import android.support.v7.widget.CardView;
-import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
+
+import androidx.annotation.NonNull;
+import androidx.cardview.widget.CardView;
+import androidx.core.app.ActivityOptionsCompat;
+import androidx.core.content.ContextCompat;
+import androidx.core.util.Pair;
+import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.ArrayList;
 
@@ -55,10 +56,10 @@ class MyAdapter extends RecyclerView.Adapter<MyAdapter.ViewHolder> {
                 Intent intent = new Intent(context, StatsActivity.class);
                 intent.putExtra("ResultInfoObject", info);
 
-                Pair<View, String> p1 = Pair.create((View) holder.branch_img, holder.branch_img.getTransitionName());
-                Pair<View, String> p2 = Pair.create((View) holder.branch, holder.branch.getTransitionName());
-                Pair<View, String> p3 = Pair.create((View) holder.name, holder.name.getTransitionName());
-                Pair<View, String> p5 = Pair.create((View) holder.score, holder.score.getTransitionName());
+                Pair<View, String> p1 = Pair.create(holder.branch_img, holder.branch_img.getTransitionName());
+                Pair<View, String> p2 = Pair.create(holder.branch, holder.branch.getTransitionName());
+                Pair<View, String> p3 = Pair.create(holder.name, holder.name.getTransitionName());
+                Pair<View, String> p5 = Pair.create(holder.score, holder.score.getTransitionName());
 
                 ActivityOptionsCompat options = ActivityOptionsCompat.makeSceneTransitionAnimation((Activity) context,
                         p1, p2, p3, p5);

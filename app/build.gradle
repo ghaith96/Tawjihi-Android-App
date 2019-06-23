@@ -1,14 +1,14 @@
 apply plugin: 'com.android.application'
 
 android {
-    compileSdkVersion 27
+    compileSdkVersion 28
     defaultConfig {
         applicationId "com.android.tawjihi_api"
         minSdkVersion 21
-        targetSdkVersion 27
+        targetSdkVersion 28
         versionCode 1
         versionName "1.0"
-        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
     buildTypes {
         release {
@@ -16,28 +16,32 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
 }
 
 dependencies {
     implementation fileTree(include: ['*.jar'], dir: 'libs')
     //noinspection GradleCompatible
-    implementation 'com.android.support:appcompat-v7:27.1.1'
-    implementation 'com.android.support:design:27.1.1'
-    implementation 'com.android.support.constraint:constraint-layout:1.1.0'
+    implementation 'androidx.appcompat:appcompat:1.0.2'
+    implementation 'com.google.android.material:material:1.0.0'
+    implementation 'androidx.constraintlayout:constraintlayout:1.1.3'
     testImplementation 'junit:junit:4.12'
-    androidTestImplementation 'com.android.support.test:runner:1.0.2'
-    androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
+    androidTestImplementation 'androidx.test:runner:1.2.0'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
     implementation 'com.squareup.okhttp3:okhttp:3.10.0'
     //noinspection GradleCompatible
-    implementation 'com.android.support:support-v13:27.+'
-    implementation 'com.google.code.gson:gson:2.8.4'
+    implementation 'androidx.legacy:legacy-support-v13:1.0.0'
+    implementation 'com.google.code.gson:gson:2.8.5'
     //noinspection GradleCompatible
-    implementation 'com.android.support:cardview-v7:27.1.1'
+    implementation 'androidx.cardview:cardview:1.0.0'
     implementation 'com.github.clans:fab:1.6.4'
     implementation 'com.hootsuite.android:nachos:1.1.1'
-    implementation 'com.jakewharton:butterknife:8.8.1'
-    annotationProcessor 'com.jakewharton:butterknife-compiler:8.8.1'
-    implementation 'com.github.blackfizz:eazegraph:1.2.2@aar'
+    implementation 'com.jakewharton:butterknife:10.1.0'
+    annotationProcessor 'com.jakewharton:butterknife-compiler:10.1.0'
+    implementation 'com.github.blackfizz:eazegraph:1.2.3@aar'
     implementation 'com.nineoldandroids:library:2.4.0'
-    implementation 'com.facebook.shimmer:shimmer:0.2.0'
+    implementation 'com.facebook.shimmer:shimmer:0.4.0'
 }

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?><!-- player_row.xml -->
-<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/mainCard"
     style="@style/Base.Widget.AppCompat.Button.Borderless"
@@ -12,7 +12,7 @@
     android:transitionName="mainCard_t"
     app:cardBackgroundColor="@android:color/transparent">
 
-    <android.support.constraint.ConstraintLayout
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:padding="10dp">
@@ -106,5 +106,5 @@
             app:layout_constraintStart_toStartOf="@id/rating"
             app:layout_constraintTop_toBottomOf="@id/rating" />
 
-    </android.support.constraint.ConstraintLayout>
-</android.support.v7.widget.CardView>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.cardview.widget.CardView>
